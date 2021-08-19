@@ -1,4 +1,4 @@
-@charset "UTF-8";
+charset "UTF-8";
 /*!
 * Start Bootstrap - Full Width Pics v5.0.3 (https://startbootstrap.com/template/full-width-pics)
 * Copyright 2013-2021 Start Bootstrap
@@ -59,8 +59,8 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-color:#043f7a;
+  --bs-body-bg: #08a6a1;
 }
 
 *,
