@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +12,7 @@
 	<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 	<!-- Core theme CSS (includes Bootstrap)-->
 	<link href="css/styles.css" rel="stylesheet" />
+	    <link rel="stylesheet" href="./slider2.css">
 </head>
 
 <body>
@@ -25,11 +27,11 @@
 					</li>
 					<li class="nav-item"><a class="nav-link" href="england">영국</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="#!">프랑스</a>
+					<li class="nav-item"><a class="nav-link" href="france">프랑스</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="#!">한국</a>
+					<li class="nav-item"><a class="nav-link" href="korea">한국</a>
 					</li>
-			    <li class="nav-item"><a class="nav-link" href="#!">여행지 찾기 </a>
+			    <li class="nav-item"><a class="nav-link" href="test">여행지 찾기 </a>
 					</li>
 				</ul>
 			</div>
@@ -39,6 +41,8 @@
 	<header class="py-5 bg-image-full" style="background-image: url('https://images.unsplash.com/photo-1585392793699-321811adc0a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80')">
 
 	</header>
+
+	
 	<!-- Content section-->
 	<section class="py-5">
 		<div class="container my-5">
@@ -52,10 +56,26 @@
 		</div>
 	</section>
 	<!-- Image element - set the background image for the header in the line below-->
-	<div class="py-5 bg-image-full" style="background-image: url('https://images.unsplash.com/photo-1587447799188-cd319109d2ab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')">
-	
-		<div style="height: 20rem"></div>
+
 	</div>
+		<div class="slider">
+    <input type="radio" name="slide" id="slide1" checked>
+    <input type="radio" name="slide" id="slide2">
+    <input type="radio" name="slide" id="slide3">
+    <input type="radio" name="slide" id="slide4">
+    <ul id="imgholder" class="imgs">
+        <li><img src="./img/slide1.jpg"></li>
+        <li><img src="./img/slide2.jpg"></li>
+        <li><img src="./img/slide3.jpg"></li>
+        <li><img src="./img/slide4.jpg"></li>
+    </ul>
+    <div class="bullets">
+        <label for="slide1">&nbsp;</label>
+        <label for="slide2">&nbsp;</label>
+        <label for="slide3">&nbsp;</label>
+        <label for="slide4">&nbsp;</label>
+    </div>
+</div>
 	<!-- Content section-->
 	<section class="py-5">
 		<div class="container my-5">
