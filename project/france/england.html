@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<meta name="description" content="" />
 	<meta name="author" content="" />
-	<title>Full Width Pics - Start England</title>
+	<title>Full Width Pics - Start France</title>
 
 	<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 	<style>
@@ -60,7 +60,7 @@
 		  	text-align: right;
 		}
 
-		/* ·ÎµùÀÌ¹ÌÁö */
+		/* ë¡œë”©ì´ë¯¸ì§€ */
 		#weather_info .load_img{ 
 			position: absolute; 
 			left: 50%;top: 50%;
@@ -72,7 +72,7 @@
 <body>
 	<!-- Responsive navbar-->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<div class="container"> <a class="navbar-brand" href="#!"> England </a>
+		<div class="container"> <a class="navbar-brand" href="#!"> France </a>
 
 
 		</div>
@@ -99,33 +99,33 @@
 
 	<script>
 
-		// API ¿äÃ» URL º¯¼ö
+		// API ìš”ì²­ URL ë³€ìˆ˜
 		var url = api.openweathermap.org/data/2.5/weather?q=london&appid=315b8bd77770bfd1cb04bfd433b9dc44
 e41b7b';
 
-		// ·Îµù ÀÌ¹ÌÁö Ç¥½Ã
+		// ë¡œë”© ì´ë¯¸ì§€ í‘œì‹œ
 		$('#weather_info .load_img').show();
 
 		$.getJSON(url, function(data){
 
-			// ³¯¾¾ µ¥ÀÌÅÍ °´Ã¼
-			var sys = data.sys; 			// ±¹°¡¸í, ÀÏÃâ/ÀÏ¸ô			
-			var city = data.name; 			// µµ½Ã¸í
-			var weather = data.weather; 	// ³¯¾¾ °´Ã¼
-			var main = data.main;  			// ¿Âµµ ±â¾Ğ °ü·Ã °´Ã¼
+			// ë‚ ì”¨ ë°ì´í„° ê°ì²´
+			var sys = data.sys; 			// êµ­ê°€ëª…, ì¼ì¶œ/ì¼ëª°			
+			var city = data.name; 			// ë„ì‹œëª…
+			var weather = data.weather; 	// ë‚ ì”¨ ê°ì²´
+			var main = data.main;  			// ì˜¨ë„ ê¸°ì•• ê´€ë ¨ ê°ì²´
 	 
-			var wmain = weather[0].main; 	// ±¸¸§ »óÅÂ(Cloudiness)
-			var w_id = weather[0].id; 		// ³¯¾¾»óÅÂ id ÄÚµå
-			var icon = weather[0].icon;		// ³¯¾¾ ¾ÆÀÌÄÜ Á¤º¸
-			var country = sys.country;  	// ±¹°¡¸í
-			var temp = main.temp; 			// ÇöÀç ¿Âµµ
-			var temp_min = main.temp_min 	// ÃÖÀú ¿Âµµ
-			var temp_max = main.temp_max 	// ÃÖ°í ¿Âµµ
+			var wmain = weather[0].main; 	// êµ¬ë¦„ ìƒíƒœ(Cloudiness)
+			var w_id = weather[0].id; 		// ë‚ ì”¨ìƒíƒœ id ì½”ë“œ
+			var icon = weather[0].icon;		// ë‚ ì”¨ ì•„ì´ì½˜ ì •ë³´
+			var country = sys.country;  	// êµ­ê°€ëª…
+			var temp = main.temp; 			// í˜„ì¬ ì˜¨ë„
+			var temp_min = main.temp_min 	// ìµœì € ì˜¨ë„
+			var temp_max = main.temp_max 	// ìµœê³  ì˜¨ë„
 
-			// ³¯¾¾ ¾ÆÀÌÄÜ
+			// ë‚ ì”¨ ì•„ì´ì½˜
 			var icon_url = 'http://openweathermap.org/img/w/' + icon;
       
-			// ³¯¾¾ Á¤º¸ Ç¥½Ã
+			// ë‚ ì”¨ ì •ë³´ í‘œì‹œ
 			$('#weather_info > .city').html(city + "/" + country);			
 			$('#weather_info  .icon').html("<img src='" + icon_url + ".png'>");
 			$('#weather_info .w_id').html(wmain);
@@ -133,12 +133,12 @@ e41b7b';
 			$('#weather_info .temp_max').html( parseInt(temp_max-273.15) + '&deg;' + ' max');
 			$('#weather_info  .temp').html(parseInt(temp-273.15) + '&deg;');
 
-			// µ¥ÀÌÅÍ ·Îµù ÈÄ ·ÎµùÀÌ¹ÌÁö Á¦°Å
+			// ë°ì´í„° ë¡œë”© í›„ ë¡œë”©ì´ë¯¸ì§€ ì œê±°
 			$('#weather_info .load_img').hide();		
 
 		})	// end getJSON()
 			.fail(function() {
-				// ¿À·ù ¸Ş½ÃÁö
+				// ì˜¤ë¥˜ ë©”ì‹œì§€
    				alert( "loding error" );
   			});	
 
